@@ -6794,11 +6794,17 @@
           </spirit:physicalPort>
         </spirit:portMap>
       </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>SENSITIVITY</spirit:name>
+          <spirit:value spirit:format="string" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.IRQ_F2P.SENSITIVITY">LEVEL_HIGH</spirit:value>
+        </spirit:parameter>
+      </spirit:parameters>
       <spirit:vendorExtensions>
         <xilinx:busInterfaceInfo>
           <xilinx:enablement>
             <xilinx:presence>optional</xilinx:presence>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:dependency="((spirit:decode(id(PARAM_VALUE.PCW_IRQ_F2P_INTR)) = 1) &amp;&amp;  (spirit:decode(id(PARAM_VALUE.PCW_USE_FABRIC_INTERRUPT)) = 1))">false</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:dependency="((spirit:decode(id(PARAM_VALUE.PCW_IRQ_F2P_INTR)) = 1) &amp;&amp;  (spirit:decode(id(PARAM_VALUE.PCW_USE_FABRIC_INTERRUPT)) = 1))">true</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:busInterfaceInfo>
       </spirit:vendorExtensions>
@@ -9999,7 +10005,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>02617742</spirit:value>
+            <spirit:value>026b7336</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -10007,7 +10013,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRC</spirit:name>
-            <spirit:value>16e542bd</spirit:value>
+            <spirit:value>8af9aacf</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRCversion</spirit:name>
@@ -10015,7 +10021,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Nov 06 18:07:37 UTC 2015</spirit:value>
+            <spirit:value>Wed Nov 11 00:53:17 UTC 2015</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>StaleAtRelink</spirit:name>
@@ -10033,7 +10039,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>02617742</spirit:value>
+            <spirit:value>026b7336</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -10041,7 +10047,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRC</spirit:name>
-            <spirit:value>16e542bd</spirit:value>
+            <spirit:value>8af9aacf</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRCversion</spirit:name>
@@ -10049,7 +10055,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Nov 06 18:07:55 UTC 2015</spirit:value>
+            <spirit:value>Wed Nov 11 00:53:27 UTC 2015</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>StaleAtRelink</spirit:name>
@@ -10068,7 +10074,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>02617742</spirit:value>
+            <spirit:value>026b7336</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -10076,7 +10082,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRC</spirit:name>
-            <spirit:value>16e542bd</spirit:value>
+            <spirit:value>8af9aacf</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRCversion</spirit:name>
@@ -10084,7 +10090,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Nov 06 18:07:55 UTC 2015</spirit:value>
+            <spirit:value>Wed Nov 11 00:53:27 UTC 2015</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>StaleAtRelink</spirit:name>
@@ -10105,7 +10111,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>ddb4addf</spirit:value>
+            <spirit:value>fb67b012</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -10113,7 +10119,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRC</spirit:name>
-            <spirit:value>16e542bd</spirit:value>
+            <spirit:value>8af9aacf</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRCversion</spirit:name>
@@ -10131,7 +10137,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>ddb4addf</spirit:value>
+            <spirit:value>fb67b012</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -10139,7 +10145,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRC</spirit:name>
-            <spirit:value>16e542bd</spirit:value>
+            <spirit:value>8af9aacf</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRCversion</spirit:name>
@@ -10147,7 +10153,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Nov 06 18:07:56 UTC 2015</spirit:value>
+            <spirit:value>Wed Nov 11 00:53:27 UTC 2015</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>StaleAtRelink</spirit:name>
@@ -10165,7 +10171,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>02617742</spirit:value>
+            <spirit:value>026b7336</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -10173,7 +10179,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRC</spirit:name>
-            <spirit:value>16e542bd</spirit:value>
+            <spirit:value>8af9aacf</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRCversion</spirit:name>
@@ -10181,7 +10187,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Nov 06 18:07:56 UTC 2015</spirit:value>
+            <spirit:value>Wed Nov 11 00:14:10 UTC 2015</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>StaleAtRelink</spirit:name>
@@ -10199,7 +10205,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>02617742</spirit:value>
+            <spirit:value>026b7336</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -10207,7 +10213,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRC</spirit:name>
-            <spirit:value>16e542bd</spirit:value>
+            <spirit:value>8af9aacf</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRCversion</spirit:name>
@@ -10215,7 +10221,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Nov 06 18:07:57 UTC 2015</spirit:value>
+            <spirit:value>Wed Nov 11 00:53:27 UTC 2015</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>StaleAtRelink</spirit:name>
@@ -24277,7 +24283,7 @@
           <xilinx:portInfo>
             <xilinx:enablement>
               <xilinx:presence>optional</xilinx:presence>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:dependency="((spirit:decode(id(PARAM_VALUE.PCW_IRQ_F2P_INTR)) = 1) &amp;&amp;  (spirit:decode(id(PARAM_VALUE.PCW_USE_FABRIC_INTERRUPT)) = 1))">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:dependency="((spirit:decode(id(PARAM_VALUE.PCW_IRQ_F2P_INTR)) = 1) &amp;&amp;  (spirit:decode(id(PARAM_VALUE.PCW_USE_FABRIC_INTERRUPT)) = 1))">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -34773,7 +34779,7 @@
     <spirit:parameter>
       <spirit:name>PCW_USE_FABRIC_INTERRUPT</spirit:name>
       <spirit:displayName>PCW USE FABRIC INTERRUPT</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_USE_FABRIC_INTERRUPT" spirit:choiceRef="choices_103" spirit:order="48500">0</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_USE_FABRIC_INTERRUPT" spirit:choiceRef="choices_103" spirit:order="48500">1</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PCW_USE_PROC_EVENT_BUS</spirit:name>
@@ -34833,7 +34839,7 @@
         <xilinx:parameterInfo>
           <xilinx:enablement>
             <xilinx:presence>optional</xilinx:presence>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PCW_EN_EMIO_GPIO)) = 1) ">true</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PCW_EN_EMIO_GPIO)) = 1) ">false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -34847,7 +34853,7 @@
         <xilinx:parameterInfo>
           <xilinx:enablement>
             <xilinx:presence>optional</xilinx:presence>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PCW_EN_UART0)) = 1)">true</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PCW_EN_UART0)) = 1)">false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -34861,7 +34867,7 @@
         <xilinx:parameterInfo>
           <xilinx:enablement>
             <xilinx:presence>optional</xilinx:presence>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PCW_EN_UART1)) = 1)">true</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PCW_EN_UART1)) = 1)">false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -35177,7 +35183,7 @@
         <xilinx:parameterInfo>
           <xilinx:enablement>
             <xilinx:presence>optional</xilinx:presence>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PCW_IRQ_F2P_INTR)) = 1) ">false</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PCW_IRQ_F2P_INTR)) = 1) ">true</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -36020,12 +36026,12 @@
     <spirit:parameter>
       <spirit:name>PCW_IRQ_F2P_INTR</spirit:name>
       <spirit:displayName>PCW IRQ F2P INTR</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_IRQ_F2P_INTR" spirit:choiceRef="choices_204" spirit:order="60280">0</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_IRQ_F2P_INTR" spirit:choiceRef="choices_204" spirit:order="60280">1</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
             <xilinx:presence>optional</xilinx:presence>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PCW_USE_FABRIC_INTERRUPT)) = 1)">false</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PCW_USE_FABRIC_INTERRUPT)) = 1)">true</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -36051,7 +36057,7 @@
         <xilinx:parameterInfo>
           <xilinx:enablement>
             <xilinx:presence>optional</xilinx:presence>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PCW_USE_FABRIC_INTERRUPT)) = 1)">false</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PCW_USE_FABRIC_INTERRUPT)) = 1)">true</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -36064,7 +36070,7 @@
         <xilinx:parameterInfo>
           <xilinx:enablement>
             <xilinx:presence>optional</xilinx:presence>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PCW_USE_FABRIC_INTERRUPT)) = 1)">false</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PCW_USE_FABRIC_INTERRUPT)) = 1)">true</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -36077,7 +36083,7 @@
         <xilinx:parameterInfo>
           <xilinx:enablement>
             <xilinx:presence>optional</xilinx:presence>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PCW_USE_FABRIC_INTERRUPT)) = 1)">false</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PCW_USE_FABRIC_INTERRUPT)) = 1)">true</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -36090,7 +36096,7 @@
         <xilinx:parameterInfo>
           <xilinx:enablement>
             <xilinx:presence>optional</xilinx:presence>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PCW_USE_FABRIC_INTERRUPT)) = 1)">false</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PCW_USE_FABRIC_INTERRUPT)) = 1)">true</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -41722,11 +41728,15 @@
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_GP0.BUSER_WIDTH" xilinx:valueSource="constant"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_GP0.ID_WIDTH" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PCW_FPGA0_PERIPHERAL_FREQMHZ" xilinx:valueSource="user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_GP0_ACLK.FREQ_HZ" xilinx:valueSource="user_prop"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_GP0.FREQ_HZ" xilinx:valueSource="user_prop"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_GP0_ACLK.CLK_DOMAIN" xilinx:valueSource="default_prop"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_GP0.CLK_DOMAIN" xilinx:valueSource="default_prop"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PCW_M_AXI_GP0_FREQMHZ" xilinx:valueSource="propagated"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PCW_IRQ_F2P_INTR" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PCW_USE_FABRIC_INTERRUPT" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PCW_NUM_F2P_INTR_INPUTS" xilinx:valueSource="propagated"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_GP0_ACLK.FREQ_HZ" xilinx:valueSource="user_prop"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_GP0.FREQ_HZ" xilinx:valueSource="user_prop"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.IRQ_F2P.SENSITIVITY" xilinx:valueSource="propagated"/>
       </xilinx:configElementInfos>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>

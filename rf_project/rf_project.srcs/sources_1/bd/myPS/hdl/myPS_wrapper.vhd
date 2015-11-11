@@ -1,8 +1,8 @@
 --Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
---Tool Version: Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
---Date        : Fri Nov 06 12:07:37 2015
---Host        : Joey running 64-bit major release  (build 9200)
+--Tool Version: Vivado v.2015.2.1 (win64) Build 1302555 Wed Aug  5 13:06:02 MDT 2015
+--Date        : Tue Nov 10 18:53:16 2015
+--Host        : CSCE-9020-03 running 64-bit Service Pack 1  (build 7601)
 --Command     : generate_target myPS_wrapper.bd
 --Design      : myPS_wrapper
 --Purpose     : IP block netlist
@@ -34,7 +34,13 @@ entity myPS_wrapper is
     FIXED_IO_mio : inout STD_LOGIC_VECTOR ( 53 downto 0 );
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
-    FIXED_IO_ps_srstb : inout STD_LOGIC
+    FIXED_IO_ps_srstb : inout STD_LOGIC;
+    muxselect_tri_o : out STD_LOGIC_VECTOR ( 0 to 0 );
+    speeddutyint_tri_o : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    speedread_tri_i : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    steeringdutyint_tri_o : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    steeringread_tri_i : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    switch_tri_i : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
 end myPS_wrapper;
 
@@ -62,6 +68,12 @@ architecture STRUCTURE of myPS_wrapper is
     FIXED_IO_ps_srstb : inout STD_LOGIC;
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
+    switch_tri_i : in STD_LOGIC_VECTOR ( 0 to 0 );
+    speedRead_tri_i : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    steeringRead_tri_i : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    muxSelect_tri_o : out STD_LOGIC_VECTOR ( 0 to 0 );
+    steeringDutyInt_tri_o : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    speedDutyInt_tri_o : out STD_LOGIC_VECTOR ( 7 downto 0 );
     FCLK_CLK0 : out STD_LOGIC
   );
   end component myPS;
@@ -89,6 +101,12 @@ myPS_i: component myPS
       FIXED_IO_mio(53 downto 0) => FIXED_IO_mio(53 downto 0),
       FIXED_IO_ps_clk => FIXED_IO_ps_clk,
       FIXED_IO_ps_porb => FIXED_IO_ps_porb,
-      FIXED_IO_ps_srstb => FIXED_IO_ps_srstb
+      FIXED_IO_ps_srstb => FIXED_IO_ps_srstb,
+      muxSelect_tri_o(0) => muxselect_tri_o(0),
+      speedDutyInt_tri_o(7 downto 0) => speeddutyint_tri_o(7 downto 0),
+      speedRead_tri_i(7 downto 0) => speedread_tri_i(7 downto 0),
+      steeringDutyInt_tri_o(7 downto 0) => steeringdutyint_tri_o(7 downto 0),
+      steeringRead_tri_i(7 downto 0) => steeringread_tri_i(7 downto 0),
+      switch_tri_i(0) => switch_tri_i(0)
     );
 end STRUCTURE;

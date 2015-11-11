@@ -26,7 +26,7 @@ use xil_defaultlib.all;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
 -- Uncomment the following library declaration if instantiating
 -- any Xilinx leaf cells in this code.
@@ -35,7 +35,7 @@ use xil_defaultlib.all;
 
 entity top is
   Port (
-  speed, steering : in std_logic;
+  speed, steering, switchIn : in std_logic;
   speedOut, steeringOut : out std_logic
   );
 end top;
@@ -65,7 +65,13 @@ component myPS_wrapper is
   FIXED_IO_mio : inout STD_LOGIC_VECTOR ( 53 downto 0 );
   FIXED_IO_ps_clk : inout STD_LOGIC;
   FIXED_IO_ps_porb : inout STD_LOGIC;
-  FIXED_IO_ps_srstb : inout STD_LOGIC
+  FIXED_IO_ps_srstb : inout STD_LOGIC;
+  muxselect_tri_o : out STD_LOGIC_VECTOR ( 0 to 0 );
+  speeddutyint_tri_o : out STD_LOGIC_VECTOR ( 7 downto 0 );
+  speedread_tri_i : in STD_LOGIC_VECTOR ( 7 downto 0 );
+  steeringdutyint_tri_o : out STD_LOGIC_VECTOR ( 7 downto 0 );
+  steeringread_tri_i : in STD_LOGIC_VECTOR ( 7 downto 0 );
+  switch_tri_i : in STD_LOGIC_VECTOR ( 0 to 0 )
 );
 end component;
 
@@ -95,16 +101,28 @@ component steeringPWM is
            pwmOut : out STD_LOGIC);
 end component;
 
+component mux is
+    Port ( a : in STD_LOGIC;
+           b : in STD_LOGIC;
+           sel : in STD_LOGIC;
+           output : out STD_LOGIC);
+end component;
+
 signal fastClk, slowClk : std_logic;
-signal speedDuty,steeringDuty : integer;
+signal speedDuty,steeringDuty : std_logic_vector(7 downto 0) := "00000000";
+signal muxSelect : std_logic_vector(0 downto 0);
+signal speedTemp, steeringTemp : integer;
+signal speedPWMout, steeringPWMout : std_logic;
 
 begin
 
 theClkDivider : entity xil_defaultlib.myClkDivider generic map (100000000,100000) port map (clk => fastClk, clkOut=> slowClk);
-theRemote : entity xil_defaultlib.rfChangeDetect port map (clk => slowClk, speedIn => speed, steeringIn => steering, speedOut => speedDuty, steeringOut => steeringDuty);
-theSpeed : entity xil_defaultlib.speedPWM port map (clk => slowClk, dutyCycle => speedDuty, pwmOut => speedOut);
-theSteering : entity xil_defaultlib.steeringPWM port map (clk => slowClk, dutyCycle => steeringDuty, pwmOut => steeringOut);
-thePS : entity xil_defaultlib.myPS_wrapper port map (FCLK_CLK0 => fastClk);
+theRemote : entity xil_defaultlib.rfChangeDetect port map (clk => slowClk, speedIn => speed, steeringIn => steering, speedOut => speedTemp, steeringOut => steeringTemp);
+theSpeed : entity xil_defaultlib.speedPWM port map (clk => slowClk, dutyCycle => to_integer(unsigned(speedDuty)), pwmOut => speedPWMout);
+theSteering : entity xil_defaultlib.steeringPWM port map (clk => slowClk, dutyCycle => to_integer(unsigned(steeringDuty)), pwmOut => steeringPWMout);
+thePS : entity xil_defaultlib.myPS_wrapper port map (FCLK_CLK0 => fastClk, muxselect_tri_o => muxSelect, speedread_tri_i => std_logic_vector(to_unsigned(speedTemp,8)),steeringread_tri_i => std_logic_vector(to_unsigned(steeringTemp,8)),switch_tri_i(0) => switchIn, steeringdutyint_tri_o => steeringDuty, speeddutyint_tri_o => speedDuty);
+speedMux : entity xil_defaultlib.mux port map (a => speed, b=> speedPWMout, sel => muxSelect(0), output => speedOut);
+steeringMux : entity xil_defaultlib.mux port map (a => steering, b=> steeringPWMout, sel => muxSelect(0), output => steeringOut);
 
 end Behavioral;
 
