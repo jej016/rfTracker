@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Product Version: Vivado v2015.2.1 (64-bit)              -->
+<!-- Product Version: Vivado v2015.2 (64-bit)              -->
 <!--                                                         -->
 <!-- Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="5" Path="C:/Users/jej016/Downloads/rfTracker-master/rfTracker-master/rf_project/rf_project.xpr">
+<Project Version="7" Minor="5" Path="C:/Users/Joey/Desktop/rfTracker/rf_project/rf_project.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="852a85eadebb4bf39c342d01f5907191"/>
@@ -25,22 +25,22 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
+        <CompFileExtendedInfo CompFileName="myPS.bd" FileRelPathName="hw_handoff/myPS.hwh"/>
         <CompFileExtendedInfo CompFileName="myPS.bd" FileRelPathName="myPS_ooc.xdc"/>
-        <CompFileExtendedInfo CompFileName="myPS.bd" FileRelPathName="ip/myPS_xbar_0/myPS_xbar_0.xci"/>
+        <CompFileExtendedInfo CompFileName="myPS.bd" FileRelPathName="ip/myPS_auto_pc_0/myPS_auto_pc_0.xci"/>
+        <CompFileExtendedInfo CompFileName="myPS.bd" FileRelPathName="hw_handoff/myPS_bd.tcl"/>
+        <CompFileExtendedInfo CompFileName="myPS.bd" FileRelPathName="ip/myPS_axi_gpio_4_0/myPS_axi_gpio_4_0.xci"/>
+        <CompFileExtendedInfo CompFileName="myPS.bd" FileRelPathName="ip/myPS_rst_processing_system7_0_100M_0/myPS_rst_processing_system7_0_100M_0.xci"/>
+        <CompFileExtendedInfo CompFileName="myPS.bd" FileRelPathName="ip/myPS_axi_gpio_0_3/myPS_axi_gpio_0_3.xci"/>
+        <CompFileExtendedInfo CompFileName="myPS.bd" FileRelPathName="ip/myPS_axi_gpio_0_2/myPS_axi_gpio_0_2.xci"/>
+        <CompFileExtendedInfo CompFileName="myPS.bd" FileRelPathName="ip/myPS_axi_gpio_0_1/myPS_axi_gpio_0_1.xci"/>
+        <CompFileExtendedInfo CompFileName="myPS.bd" FileRelPathName="ip/myPS_axi_gpio_0_0/myPS_axi_gpio_0_0.xci"/>
         <CompFileExtendedInfo CompFileName="myPS.bd" FileRelPathName="hdl/myPS.vhd"/>
         <CompFileExtendedInfo CompFileName="myPS.bd" FileRelPathName="ip/myPS_processing_system7_0_1/myPS_processing_system7_0_1.xci"/>
-        <CompFileExtendedInfo CompFileName="myPS.bd" FileRelPathName="ip/myPS_axi_gpio_0_0/myPS_axi_gpio_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="myPS.bd" FileRelPathName="ip/myPS_processing_system7_0_axi_periph_0/myPS_processing_system7_0_axi_periph_0.xci"/>
-        <CompFileExtendedInfo CompFileName="myPS.bd" FileRelPathName="ip/myPS_axi_gpio_0_1/myPS_axi_gpio_0_1.xci"/>
-        <CompFileExtendedInfo CompFileName="myPS.bd" FileRelPathName="ip/myPS_axi_gpio_0_2/myPS_axi_gpio_0_2.xci"/>
-        <CompFileExtendedInfo CompFileName="myPS.bd" FileRelPathName="ip/myPS_axi_gpio_0_3/myPS_axi_gpio_0_3.xci"/>
-        <CompFileExtendedInfo CompFileName="myPS.bd" FileRelPathName="ip/myPS_rst_processing_system7_0_100M_0/myPS_rst_processing_system7_0_100M_0.xci"/>
+        <CompFileExtendedInfo CompFileName="myPS.bd" FileRelPathName="ip/myPS_xbar_0/myPS_xbar_0.xci"/>
         <CompFileExtendedInfo CompFileName="myPS.bd" FileRelPathName="ip/myPS_axi_gpio_4_1/myPS_axi_gpio_4_1.xci"/>
+        <CompFileExtendedInfo CompFileName="myPS.bd" FileRelPathName="ip/myPS_processing_system7_0_axi_periph_0/myPS_processing_system7_0_axi_periph_0.xci"/>
         <CompFileExtendedInfo CompFileName="myPS.bd" FileRelPathName="hdl/myPS.hwdef"/>
-        <CompFileExtendedInfo CompFileName="myPS.bd" FileRelPathName="hw_handoff/myPS_bd.tcl"/>
-        <CompFileExtendedInfo CompFileName="myPS.bd" FileRelPathName="hw_handoff/myPS.hwh"/>
-        <CompFileExtendedInfo CompFileName="myPS.bd" FileRelPathName="ip/myPS_axi_gpio_4_0/myPS_axi_gpio_4_0.xci"/>
-        <CompFileExtendedInfo CompFileName="myPS.bd" FileRelPathName="ip/myPS_auto_pc_0/myPS_auto_pc_0.xci"/>
       </File>
       <File Path="$PSRCDIR/sources_1/new/mux.vhd">
         <FileInfo>
